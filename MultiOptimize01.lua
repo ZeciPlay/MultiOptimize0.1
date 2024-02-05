@@ -1,3 +1,19 @@
+-- MADE BY RIP#6666
+-- send issues or suggestions to my discord: discord.gg/rips
+
+if not _G.Ignore then
+    _G.Ignore = {} -- Add Instances to this table to ignore them (e.g. _G.Ignore = {workspace.Map, workspace.Map2})
+end
+if not _G.WaitPerAmount then
+    _G.WaitPerAmount = 500 -- Set Higher or Lower depending on your computer's performance
+end
+if _G.SendNotifications == nil then
+    _G.SendNotifications = true -- Set to false if you don't want notifications
+end
+if _G.ConsoleLogs == nil then
+    _G.ConsoleLogs = false -- Set to true if you want console logs (mainly for debugging)
+end
+
 
 
 if not game:IsLoaded() then
@@ -13,37 +29,37 @@ if not _G.Settings then
             ["Ignore Tools"] = true
         },
         Meshes = {
-            NoMesh = true,
-            NoTexture = true,
-            Destroy = true
+            NoMesh = false,
+            NoTexture = false,
+            Destroy = false
         },
         Images = {
             Invisible = true,
-            Destroy =  true
+            Destroy = false
         },
         Explosions = {
             Smaller = true,
-            Invisible = true,
-            Destroy = true
+            Invisible = false, -- Not recommended for PVP games
+            Destroy = false -- Not recommended for PVP games
         },
         Particles = {
             Invisible = true,
-            Destroy = true
+            Destroy = false
         },
         TextLabels = {
-            LowerQuality = true,
+            LowerQuality = false,
             Invisible = false,
             Destroy = false
         },
         MeshParts = {
             LowerQuality = true,
-            Invisible = true,
-            NoTexture = true,
-            NoMesh = true,
-            Destroy = true
+            Invisible = false,
+            NoTexture = false,
+            NoMesh = false,
+            Destroy = false
         },
         Other = {
-            ["FPS Cap"] = 120,
+            ["FPS Cap"] = 240, -- Set this true to uncap FPS
             ["No Camera Effects"] = true,
             ["No Clothes"] = true,
             ["Low Water Graphics"] = true,
@@ -201,7 +217,7 @@ coroutine.wrap(pcall)(function()
             StarterGui:SetCore("SendNotification", {
                 Title = "discord.gg/rips",
                 Text = "Your exploit does not support sethiddenproperty, please use a different exploit.",
-                Duration = 1,
+                Duration = 5,
                 Button1 = "Okay"
             })
             warn("Your exploit does not support sethiddenproperty, please use a different exploit.")
@@ -210,7 +226,7 @@ coroutine.wrap(pcall)(function()
             StarterGui:SetCore("SendNotification", {
                 Title = "discord.gg/rips",
                 Text = "Low Water Graphics Enabled",
-                Duration = 1,
+                Duration = 5,
                 Button1 = "Okay"
             })
         end
@@ -230,7 +246,7 @@ coroutine.wrap(pcall)(function()
             StarterGui:SetCore("SendNotification", {
                 Title = "discord.gg/rips",
                 Text = "Your exploit does not support sethiddenproperty, please use a different exploit.",
-                Duration = 1,
+                Duration = 5,
                 Button1 = "Okay"
             })
             warn("Your exploit does not support sethiddenproperty, please use a different exploit.")
@@ -239,7 +255,7 @@ coroutine.wrap(pcall)(function()
             StarterGui:SetCore("SendNotification", {
                 Title = "discord.gg/rips",
                 Text = "No Shadows Enabled",
-                Duration = 1,
+                Duration = 5,
                 Button1 = "Okay"
             })
         end
@@ -256,7 +272,7 @@ coroutine.wrap(pcall)(function()
             StarterGui:SetCore("SendNotification", {
                 Title = "discord.gg/rips",
                 Text = "Low Rendering Enabled",
-                Duration = 1,
+                Duration = 5,
                 Button1 = "Okay"
             })
         end
@@ -275,7 +291,7 @@ coroutine.wrap(pcall)(function()
             StarterGui:SetCore("SendNotification", {
                 Title = "discord.gg/rips",
                 Text = "Reset Materials Enabled",
-                Duration = 1,
+                Duration = 5,
                 Button1 = "Okay"
             })
         end
