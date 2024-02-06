@@ -22,18 +22,18 @@ end
 if not _G.Settings then
     _G.Settings = {
         Players = {
-            ["Ignore Me"] = false,
-            ["Ignore Others"] = false,
+            ["Ignore Me"] = true,
+            ["Ignore Others"] = true,
             ["Ignore Tools"] = true
         },
         Meshes = {
             NoMesh = true,
             NoTexture =true,
-            Destroy = false
+            Destroy = true
         },
         Images = {
-            Invisible = true,
-            Destroy = false
+            Invisible = false,
+            Destroy = true
         },
         Explosions = {
             Smaller = true,
@@ -51,10 +51,10 @@ if not _G.Settings then
         },
         MeshParts = {
             LowerQuality = true,
-            Invisible = true,
+            Invisible = false,
             NoTexture = true,
             NoMesh = true,
-            Destroy = false
+            Destroy = true
         },
         Other = {
             ["FPS Cap"] = 120, -- Set this true to uncap FPS
@@ -164,7 +164,7 @@ local function CheckIfBad(Instance)
             end
         elseif Instance:IsA("Model") then
             if _G.Settings["Low Quality Models"] or (_G.Settings.Other and _G.Settings.Other["Low Quality Models"]) then
-                Instance.LevelOfDetail = 1
+                Instance.LevelOfDetail = 0
             end
         elseif Instance:IsA("MeshPart") then
             if _G.Settings["Low Quality MeshParts"] or (_G.Settings.Other and _G.Settings.Other["Low Quality MeshParts"]) or (_G.Settings.MeshParts and _G.Settings.MeshParts.LowerQuality) then
