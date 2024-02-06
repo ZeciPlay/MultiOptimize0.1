@@ -23,17 +23,17 @@ if not _G.Settings then
     _G.Settings = {
         Players = {
             ["Ignore Me"] = false,
-            ["Ignore Others"] = false,
+            ["Ignore Others"] = true,
             ["Ignore Tools"] = true
         },
         Meshes = {
             NoMesh = true,
             NoTexture =true,
-            Destroy = false
+            Destroy = true
         },
         Images = {
             Invisible = true,
-            Destroy = false
+            Destroy = true
         },
         Explosions = {
             Smaller = true,
@@ -59,7 +59,7 @@ if not _G.Settings then
         Other = {
             ["FPS Cap"] = 120, -- Set this true to uncap FPS
             ["No Camera Effects"] = true,
-            ["No Clothes"] = false,
+            ["No Clothes"] = true,
             ["Low Water Graphics"] = true,
             ["No Shadows"] = true,
             ["Low Rendering"] = true,
