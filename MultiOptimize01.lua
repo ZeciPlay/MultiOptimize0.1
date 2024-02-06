@@ -33,7 +33,7 @@ if not _G.Settings then
         },
         Images = {
             Invisible = true,
-            Destroy = true
+            Destroy = false
         },
         Explosions = {
             Smaller = true,
@@ -59,7 +59,7 @@ if not _G.Settings then
         Other = {
             ["FPS Cap"] = 120, -- Set this true to uncap FPS
             ["No Camera Effects"] = true,
-            ["No Clothes"] = true,
+            ["No Clothes"] = false,
             ["Low Water Graphics"] = true,
             ["No Shadows"] = true,
             ["Low Rendering"] = true,
