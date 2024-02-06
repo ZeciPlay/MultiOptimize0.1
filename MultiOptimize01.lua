@@ -24,23 +24,23 @@ end
 if not _G.Settings then
     _G.Settings = {
         Players = {
-            ["Ignore Me"] =false,
+            ["Ignore Me"] = true,
             ["Ignore Others"] = true,
             ["Ignore Tools"] = true
         },
         Meshes = {
-            NoMesh =true,
+            NoMesh = true,
             NoTexture =true,
             Destroy = false
         },
         Images = {
             Invisible = true,
-            Destroy = false
+            Destroy = true
         },
         Explosions = {
             Smaller = false,
-            Invisible = true, -- Not recommended for PVP games
-            Destroy = true -- Not recommended for PVP games
+            Invisible = true,
+            Destroy = true 
         },
         Particles = {
             Invisible = true,
@@ -56,7 +56,7 @@ if not _G.Settings then
             Invisible = true,
             NoTexture = true,
             NoMesh = true,
-            Destroy = false
+            Destroy = true
         },
         Other = {
             ["FPS Cap"] = 120, -- Set this true to uncap FPS
@@ -170,13 +170,13 @@ local function CheckIfBad(Instance)
             end
         elseif Instance:IsA("MeshPart") then
             if _G.Settings["Low Quality MeshParts"] or (_G.Settings.Other and _G.Settings.Other["Low Quality MeshParts"]) or (_G.Settings.MeshParts and _G.Settings.MeshParts.LowerQuality) then
-                Instance.RenderFidelity = 2
+                Instance.RenderFidelity = 1
                 Instance.Reflectance = 0
                 Instance.Material = Enum.Material.Plastic
             end
             if _G.Settings["Invisible MeshParts"] or (_G.Settings.Other and _G.Settings.Other["Invisible MeshParts"]) or (_G.Settings.MeshParts and _G.Settings.MeshParts.Invisible) then
                 Instance.Transparency = 1
-                Instance.RenderFidelity = 2
+                Instance.RenderFidelity = 1
                 Instance.Reflectance = 0
                 Instance.Material = Enum.Material.Plastic
             end
@@ -194,8 +194,8 @@ local function CheckIfBad(Instance)
 end
 if _G.SendNotifications then
     StarterGui:SetCore("SendNotification", {
-        Title = "discord.gg/rips",
-        Text = "Loading FPS Booster...",
+        Title = "Eu Amor Goiaba",
+        Text = "Carregando Fps Booster",
         Duration = math.huge,
         Button1 = "Okay"
     })
@@ -241,7 +241,7 @@ coroutine.wrap(pcall)(function()
         Lighting.FogEnd = 9e9
         Lighting.ShadowSoftness = 0
         if sethiddenproperty then
-            sethiddenproperty(Lighting, "Technology", 2)
+            sethiddenproperty(Lighting, "Technology", 1)
         else
             StarterGui:SetCore("SendNotification", {
                 Title = "discord.gg/rips",
