@@ -22,14 +22,14 @@ end
 if not _G.Settings then
     _G.Settings = {
         Players = {
-            ["Ignore Me"] = true,
+            ["Ignore Me"] = false,
             ["Ignore Others"] = false,
             ["Ignore Tools"] = true
         },
         Meshes = {
             NoMesh = true,
             NoTexture =true,
-            Destroy = true
+            Destroy = false
         },
         Images = {
             Invisible = true,
