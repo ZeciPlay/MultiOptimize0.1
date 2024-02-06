@@ -3,7 +3,7 @@ if not _G.Ignore then
     _G.Ignore = {} -- Add Instances to this table to ignore them (e.g. _G.Ignore = {workspace.Map, workspace.Map2})
 end
 if not _G.WaitPerAmount then
-    _G.WaitPerAmount = 500 -- Set Higher or Lower depending on your computer's performance
+    _G.WaitPerAmount = 350 -- Set Higher or Lower depending on your computer's performance
 end
 if _G.SendNotifications == nil then
     _G.SendNotifications = true -- Set to false if you don't want notifications
@@ -106,7 +106,7 @@ local function CheckIfBad(Instance)
                 Instance.Shiny = 1
             end
             if _G.Settings.Images.LowDetail then
-                Instance.Shiny = 10
+                Instance.Shiny = 0
             end
             if _G.Settings.Images.Destroy then
                 Instance:Destroy()
