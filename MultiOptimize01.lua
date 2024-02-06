@@ -23,7 +23,7 @@ if not _G.Settings then
     _G.Settings = {
         Players = {
             ["Ignore Me"] = true,
-            ["Ignore Others"] = true,
+            ["Ignore Others"] = false,
             ["Ignore Tools"] = true
         },
         Meshes = {
