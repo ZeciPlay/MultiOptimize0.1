@@ -23,7 +23,7 @@ if not _G.Settings then
     _G.Settings = {
         Players = {
             ["Ignore Me"] = false,
-            ["Ignore Others"] = true,
+            ["Ignore Others"] = false,
             ["Ignore Tools"] = true
         },
         Meshes = {
@@ -33,7 +33,7 @@ if not _G.Settings then
         },
         Images = {
             Invisible = true,
-            Destroy = true
+            Destroy = false
         },
         Explosions = {
             Smaller = true,
@@ -54,7 +54,7 @@ if not _G.Settings then
             Invisible = true,
             NoTexture = true,
             NoMesh = true,
-            Destroy = true
+            Destroy = false
         },
         Other = {
             ["FPS Cap"] = 120, -- Set this true to uncap FPS
