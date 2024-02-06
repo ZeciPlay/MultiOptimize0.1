@@ -29,7 +29,7 @@ if not _G.Settings then
         Meshes = {
             NoMesh = true,
             NoTexture =true,
-            Destroy = true
+            Destroy = false
         },
         Images = {
             Invisible = true,
@@ -106,7 +106,7 @@ local function CheckIfBad(Instance)
                 Instance.Shiny = 1
             end
             if _G.Settings.Images.LowDetail then
-                Instance.Shiny = 1
+                Instance.Shiny = 10
             end
             if _G.Settings.Images.Destroy then
                 Instance:Destroy()
