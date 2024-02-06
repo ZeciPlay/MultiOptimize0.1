@@ -46,8 +46,8 @@ if not _G.Settings then
         },
         TextLabels = {
             LowerQuality =true,
-            Invisible = true,
-            Destroy = true
+            Invisible = false,
+            Destroy = false
         },
         MeshParts = {
             LowerQuality = true,
