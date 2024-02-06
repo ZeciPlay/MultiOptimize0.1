@@ -1,5 +1,3 @@
--- MADE BY RIP#6666
--- send issues or suggestions to my discord: discord.gg/rips
 
 if not _G.Ignore then
     _G.Ignore = {} -- Add Instances to this table to ignore them (e.g. _G.Ignore = {workspace.Map, workspace.Map2})
@@ -31,14 +29,14 @@ if not _G.Settings then
         Meshes = {
             NoMesh = true,
             NoTexture =true,
-            Destroy = false
+            Destroy = true
         },
         Images = {
             Invisible = true,
             Destroy = true
         },
         Explosions = {
-            Smaller = false,
+            Smaller = true,
             Invisible = true,
             Destroy = true 
         },
@@ -48,8 +46,8 @@ if not _G.Settings then
         },
         TextLabels = {
             LowerQuality =true,
-            Invisible = false,
-            Destroy = false
+            Invisible = true,
+            Destroy = true
         },
         MeshParts = {
             LowerQuality = true,
@@ -156,7 +154,7 @@ local function CheckIfBad(Instance)
                 Instance.Font = Enum.Font.SourceSans
                 Instance.TextScaled = false
                 Instance.RichText = false
-                Instance.TextSize = 14
+                Instance.TextSize = 10
             end
             if _G.Settings["Invisible TextLabels"] or (_G.Settings.Other and _G.Settings.Other["Invisible TextLabels"]) or (_G.Settings.TextLabels and _G.Settings.TextLabels.Invisible) then
                 Instance.Visible = false
@@ -241,7 +239,7 @@ coroutine.wrap(pcall)(function()
         Lighting.FogEnd = 9e9
         Lighting.ShadowSoftness = 0
         if sethiddenproperty then
-            sethiddenproperty(Lighting, "Technology", 1)
+            sethiddenproperty(Lighting, "Technology", 2)
         else
             StarterGui:SetCore("SendNotification", {
                 Title = "discord.gg/rips",
@@ -286,7 +284,7 @@ coroutine.wrap(pcall)(function()
         for i, v in pairs(MaterialService:GetChildren()) do
             v:Destroy()
         end
-        MaterialService.Use2022Materials = false
+        MaterialService.Use2022Materials = true
         if _G.SendNotifications then
             StarterGui:SetCore("SendNotification", {
                 Title = "discord.gg/rips",
