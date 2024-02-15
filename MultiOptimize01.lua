@@ -24,7 +24,7 @@ if not _G.Settings then
         Players = {
             ["Ignore Me"] = false,
             ["Ignore Others"] = false,
-            ["Ignore Tools"] = true
+            ["Ignore Tools"] = false
         },
         Meshes = {
             NoMesh = true,
@@ -33,7 +33,7 @@ if not _G.Settings then
         },
         Images = {
             Invisible = true,
-            Destroy = true
+            Destroy = false
         },
         Explosions = {
             Smaller = true,
@@ -46,7 +46,7 @@ if not _G.Settings then
         },
         TextLabels = {
             LowerQuality =true,
-            Invisible = false,
+            Invisible = true,
             Destroy = false
         },
         MeshParts = {
@@ -57,7 +57,7 @@ if not _G.Settings then
             Destroy = true
         },
         Other = {
-            ["FPS Cap"] = 120, -- Set this true to uncap FPS
+            ["FPS Cap"] = 45, -- Set this true to uncap FPS
             ["No Camera Effects"] = true,
             ["No Clothes"] = false,
             ["Low Water Graphics"] = true,
@@ -268,8 +268,8 @@ coroutine.wrap(pcall)(function()
         settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
         if _G.SendNotifications then
             StarterGui:SetCore("SendNotification", {
-                Title = "discord.gg/rips",
-                Text = "Low Rendering Enabled",
+                Title = "PQ VC N AMAR GOIABA?😡",
+                Text = "Baixa Renderização Foi👌",
                 Duration = 5,
                 Button1 = "Okay"
             })
